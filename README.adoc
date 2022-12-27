@@ -11,6 +11,7 @@ v1.0, 2022-12
 :sectnums: 
 :source-highlighter: pygments
 :imagesdir: images
+:pdf-theme: custom  
 // Start: Enable admonition icons
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -70,9 +71,12 @@ Many tools can simplify the process of generating your first OpenAPI definition.
 
 == Apicurito on Openshift
 
+You can install Apicurito on Openshift using the official operator.
 
+
+[.center]
 .Apicurito Operator
-image::ocp-apicurito-operator.png["Apicurito Operator"]
+image::ocp-apicurito-operator.png["Apicurito Operator",width=70%,align=center]
 
 
 == swagger-codegen vs openapi-generator
