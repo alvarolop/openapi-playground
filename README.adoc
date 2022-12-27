@@ -1,0 +1,80 @@
+= OpenAPI Playground
+Álvaro López Medina <alopezme@redhat.com>
+v1.0, 2022-12
+// Metadata
+:description: This repository showcases how to create example applications based on an OpenAPI definition.
+:keywords: openapi, api-first, playground, red hat
+// Create TOC wherever needed
+:toc: macro
+:sectanchors:
+:sectnumlevels: 2
+:sectnums: 
+:source-highlighter: pygments
+:imagesdir: images
+// Start: Enable admonition icons
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:icons: font
+endif::[]
+// End: Enable admonition icons
+// Create the Table of contents here
+toc::[]
+
+
+== Introduction
+
+This repository showcases how to create example applications based on an OpenAPI definition and provides a learning path for developers that want to get started with this game changer development approach.
+
+== Concepts
+
+=== What is *OpenAPI*?
+
+The OpenAPI Specification (OAS) - formerly known as Swagger - defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
+
+=== What is *API-first*?
+
+An API-first approach means that for any given development project, your APIs are treated as "first-class citizens". Everything about a project revolves around the idea that the end product will be consumed by mobile devices, and that APIs will be consumed by client applications.
+
+This development approach provides several benefits:
+
+* Development teams can work in parallel.
+* Reduces the cost of developing apps.
+* Increases the speed to market.
+
+=== What is *Apicurito*?
+
+Apicurito is the OpenAPI editor found in Studio and repackaged as a simple standalone web application. It has no back-end component at all, which makes it incredibly easy to package, deploy, and use.
+
+
+== Writing the OpenAPI specification
+
+Many tools can simplify the process of generating your first OpenAPI definition. Here I will list several tools that you can use depending on your needs:
+
+* The easiest tool is the https://editor-next.swagger.io/[Swagger Editor] for OpenAPI.
+** *Swagger Editor* offers an easy way to get started with the OpenAPI Specification, as well as the AsyncAPI specification.
+* However, if you want to generate the schemas, store them in an OpenAPI schema registry and then use them inside the Red Hat ecosystem in an integrated and simplified way, you will love the https://console.redhat.com/application-services/api-designer/[Red Hat's API Designer].
+** *API Designer* is a tool to design your APIs (OpenAPI, AsyncAPI) and schemas (Apache Avro, Google Protobuf, JSON Schema). Manage your collection of API and schema designs by creating, importing, and editing. Save your work by downloading your designs locally or by exporting them to OpenShift Service Registry.
+* Finally, many companies don't want to rely on managed cloud services to design and store their API definitions. In that case, Red Hat also provides an https://github.com/Apicurio/apicurio-operators/tree/master/apicurito[on-premise version of `API Designer`] based on the Apicurito open-source project.
+
+
+
+
+== Auto-generating code
+
+
+
+
+== Apicurito on Openshift
+
+
+.Apicurito Operator
+image::ocp-apicurito-operator.png["Apicurito Operator"]
+
+
+== Relevant links
