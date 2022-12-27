@@ -129,3 +129,7 @@ As of today, OpenAPI has doubled the contributors and almost doubled the commits
 * Source: https://openapi-generator.tech/docs/faq/#what-is-the-difference-between-swagger-codegen-and-openapi-generator[What is the difference between Swagger Codegen and OpenAPI Generator?].
 
 == Relevant links
+
+* https://swagger.io[Swagger website].
+* https://www.openapis.org[OpenAPI Initiative].
+* https://www.apicur.io[Apicurio website].
