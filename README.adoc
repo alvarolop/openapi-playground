@@ -61,12 +61,10 @@ Many tools can simplify the process of generating your first OpenAPI definition.
 * However, if you want to generate the schemas, store them in an OpenAPI schema registry and then use them inside the Red Hat ecosystem in an integrated and simplified way, you will love the https://console.redhat.com/application-services/api-designer/[Red Hat's API Designer].
 ** *API Designer* is a tool to design your APIs (OpenAPI, AsyncAPI) and schemas (Apache Avro, Google Protobuf, JSON Schema). Manage your collection of API and schema designs by creating, importing, and editing. Save your work by downloading your designs locally or by exporting them to OpenShift Service Registry.
 * Finally, many companies don't want to rely on managed cloud services to design and store their API definitions. In that case, Red Hat also provides an https://github.com/Apicurio/apicurio-operators/tree/master/apicurito[on-premise version of `API Designer`] based on the Apicurito open-source project.
-
-
+** https://access.redhat.com/documentation/en-us/red_hat_openshift_api_designer/1[*Red Hat Integration - API Designer*] is the operator for installing Apicurito, a small/minimal version of Apicurio used for standalone editing of API designs on Openshift.
 
 
 == Auto-generating code
-
 
 
 
@@ -76,5 +74,20 @@ Many tools can simplify the process of generating your first OpenAPI definition.
 .Apicurito Operator
 image::ocp-apicurito-operator.png["Apicurito Operator"]
 
+
+== swagger-codegen vs openapi-generator
+
+The OpenAPI ecosystem has been quite messy as two organizations are working on this topic: Swagger and OpenAPI. `Swagger Codegen` is driven by SmartBear while OpenAPI Generator is driven by the community. 
+
+Also, comparing them on OpenHub, you can compare the activity in both projects: 
+
+* https://www.openhub.net/p/openapi-generator[OpenAPI Generator].
+* https://www.openhub.net/p/swagger-codegen[Swagger Codegen].
+
+As of today, OpenAPI has doubled the contributors and almost doubled the commits. Considering that `OpenAPI Generator` began as a fork of `Swagger Codegen`, it is clear that the best alternative today (January 2023) is to use the *OpenAPI Generator*. That's why this project is focused on this tool.
+
+
+* Source: https://news.ycombinator.com/item?id=19947817[Message from William Cheng], core team and founding member of OpenAPI Generator.
+* Source: https://openapi-generator.tech/docs/faq/#what-is-the-difference-between-swagger-codegen-and-openapi-generator[What is the difference between Swagger Codegen and OpenAPI Generator?].
 
 == Relevant links
