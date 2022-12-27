@@ -11,8 +11,6 @@ v1.0, 2022-12
 :sectnums: 
 :source-highlighter: pygments
 :imagesdir: images
-:pdf-theme: custom
-:pdf-themesdir: {docdir}  
 // Start: Enable admonition icons
 ifdef::env-github[]
 :tip-caption: :bulb:

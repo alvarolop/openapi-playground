@@ -1,4 +1,0 @@
-extends: default
-image:
-  caption:
-    align: inherit
