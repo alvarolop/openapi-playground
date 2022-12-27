@@ -11,7 +11,8 @@ v1.0, 2022-12
 :sectnums: 
 :source-highlighter: pygments
 :imagesdir: images
-:pdf-theme: custom  
+:pdf-theme: custom
+:pdf-themesdir: {docdir}  
 // Start: Enable admonition icons
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -71,12 +72,30 @@ Many tools can simplify the process of generating your first OpenAPI definition.
 
 == Apicurito on Openshift
 
-You can install Apicurito on Openshift using the official operator.
+You can install Apicurito on Openshift using the official operator. Just go to the OperatorHub, select the `Red Hat Integration - API Designer` operator and install it:
 
-
-[.center]
 .Apicurito Operator
-image::ocp-apicurito-operator.png["Apicurito Operator",width=70%,align=center]
+image::ocp-apicurito-operator.png["Apicurito Operator",width=70%]
+
+Then, create an Apicurito CR to deploy Apicurito:
+
+[source, yaml]
+----
+kind: Apicurito
+apiVersion: apicur.io/v1
+metadata:
+  name: apicurito-service
+spec:
+  size: 2
+----
+
+After a few seconds, you will be able to access Apicurito using the following Route:
+
+[source, bash]
+----
+oc get route apicurito-service-ui
+----
+
 
 
 == swagger-codegen vs openapi-generator
