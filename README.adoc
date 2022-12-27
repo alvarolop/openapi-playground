@@ -68,6 +68,23 @@ Many tools can simplify the process of generating your first OpenAPI definition.
 
 == Auto-generating code
 
+To autogenerate server code based on OpenAPI, we are going to use the https://openapi-generator.tech/[OpenAPI Generator].
+
+Several examples of OpenAPI specifications are stored in the `specifications` folder. I recommend you begin using the `petstore`, which is an https://raw.githubusercontent.com/openapitools/openapi-generator/master/modules/openapi-generator/src/test/resources/3_0/petstore.yaml[official example].
+
+There are several ways to install the generator, but I recommend the containerized alternative. Run the following command and you will have the server code in the `out` folder.
+
+[source, bash]
+----
+podman run --rm \
+    -v $PWD:/tmp/openapi/ \
+    --security-opt label=disable \
+    docker.io/openapitools/openapi-generator-cli:latest generate \
+    -i /tmp/openapi/specifications/petstore.yaml \
+    -g go \
+    -o /tmp/openapi/out/go
+----
+
 
 
 == Apicurito on Openshift
